@@ -1,0 +1,118 @@
+/* Vendor List Container */
+.vendor-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensure horizontal centering */
+  align-items: center; /* Ensure vertical centering if needed */
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+/* Vendor Cards */
+.vendor-card {
+  flex: 0 0 auto;
+  background: linear-gradient(135deg, #ffecb3, #ffd54f); /* Subtle gradient */
+  padding: 20px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vendor-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Vendor Text Styling */
+.vendor-card p {
+  font-size: 16px;
+  color: #333;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+/* Booking Button */
+.book-button {
+  background: linear-gradient(135deg, #ff9800, #ff7300);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  margin-top: 15px;
+}
+
+.book-button:hover {
+  background: linear-gradient(135deg, #ff7300, #e65100);
+  transform: scale(1.1);
+}
+
+/* Popup Box */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #4caf50, #388e3c); /* Green success background */
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeOut 2.5s linear;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Search Results Heading */
+.section-heading {
+  text-align: center;
+  color: #ff5722;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 20px auto;
+}
+
+/* No Results Message */
+.no-results {
+  text-align: center;
+  font-size: 18px;
+  color: #ff3b3b;
+  font-weight: bold;
+  padding: 20px;
+  background: #ffeeee;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .vendor-list-container {
+    justify-content: center;
+  }
+
+  .vendor-card {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .vendor-card {
+    width: 90%;
+  }
+
+  .book-button {
+    width: 100%;
+  }
+}
